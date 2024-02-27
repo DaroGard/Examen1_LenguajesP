@@ -26,8 +26,14 @@ class VueloController extends Controller
         $nvoVuelos->numeroAsientos = $request->input('numeroAsientos');
         $nvoVuelos->fechaDeSalida = $request->input('fecha');
         $nvoVuelos->save();
-
         return redirect('/vuelos');
+
+    }
+
+    public function editar($id){
+        $vuelos = Vuelo::find($id);
+
+        return view('editarVuelo', compact('vuelos'));
 
     }
 }
