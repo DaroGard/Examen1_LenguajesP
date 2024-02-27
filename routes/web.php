@@ -27,3 +27,5 @@ Route::get('asientos/tipo/editar/{id}', [TipoAsientoController::class,'editar'])
 Route::put('asientos/tipo/editar/guardar', [TipoAsientoController::class,'guardarEdit'])->name('asientos.guardar.edit');
 
 Route::get('/vuelos', [VueloController::class, 'index'])->name('vuelos.index');
+Route::get('/vuelos/nuevo', [VueloController::class,'nuevo'])->name('vuelos.nuevo');
+Route::post('/vuelos/nuevo/agregar', [VueloController::class,'agregar'])->name('vuelos.agregar');

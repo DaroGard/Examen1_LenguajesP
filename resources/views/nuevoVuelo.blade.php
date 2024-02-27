@@ -9,37 +9,35 @@
 </head>
 <body>
     <div class="container">
-        
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <h2>Crear Nuevo Vuelo</h2>
                 <br>
-                <form >
+                <form action="{{route('vuelos.agregar')}}" method="POST" autocomplete="off">
+                    @csrf
                     <div class="form-group">
-                        <label for="color">Numero:</label>
-                        <input type="text" class="form-control" />
+                        <label for="numero">Numero:</label>
+                        <input type="text" class="form-control" name="numero"/>
                     </div>
                     <div class="form-group">
-                        <label for="metros">Origen</label>
-                        <input type="text"class="form-control"/>
+                        <label for="origen">Origen</label>
+                        <input type="text"class="form-control" name="origen"/>
                     </div>
                     <div class="form-group">
-                        <label for="tipoPropiedad">Destino:</label>
-                        <input type="text" class="form-control"/>
+                        <label for="destino">Destino:</label>
+                        <input type="text" class="form-control" name="destino"/>
                     </div>
                     <div class="form-group">
-                        <label for="tipoPropiedad">Fecha Vuelo:</label>
-                        <input type="date" class="form-control"/>
+                        <label for="numeroAsientos">Numero Asientos:</label>
+                        <input type="number" class="form-control" name="numeroAsientos" />
                     </div>
                     <div class="form-group">
-                        <label for="tipoPropiedad">Cantidad:</label>
-                        <input type="number" class="form-control"/>
+                        <label for="fecha">Fecha Vuelo:</label>
+                        <input type="date" class="form-control" name="fecha"/>
                     </div>
-
-                    
                     <br>
                     <div class="form-group">
-                        <a class="btn btn-warning">Volver</a>
+                        <a href="{{route('vuelos.index')}}" class="btn btn-warning">Volver</a>
                         <button type="submit" class="btn btn-success">Guardar</button>
                     </div>
                 </form>

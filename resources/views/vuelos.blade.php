@@ -11,7 +11,7 @@
     <div class="container">
     <h1>Mantenimiento Vuelos</h1>
     <br>
-    <a class="btn btn-success">Agregar Nuevo</a>
+    <a href="{{route('vuelos.nuevo')}}" class="btn btn-success">Agregar Nuevo</a>
     <br>
     <table class="table">
         <thead>

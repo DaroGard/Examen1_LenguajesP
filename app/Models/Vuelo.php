@@ -11,5 +11,7 @@ class Vuelo extends Model
 
     protected $primaryKey = "numeroVuelo";
 
+    public $incrementing = false;
+
     public $timestamps = false;
 }

@@ -15,5 +15,19 @@ class VueloController extends Controller
     }
 
     public function nuevo(){
+        return view('nuevoVuelo');
+    }
+
+    public function agregar(Request $request){
+        $nvoVuelos = new Vuelo();
+        $nvoVuelos->numeroVuelo = $request->input('numero');
+        $nvoVuelos->origgen = $request->input('origen');
+        $nvoVuelos->destino = $request->input('destino');
+        $nvoVuelos->numeroAsientos = $request->input('numeroAsientos');
+        $nvoVuelos->fechaDeSalida = $request->input('fecha');
+        $nvoVuelos->save();
+
+        return redirect('/vuelos');
+
     }
 }
